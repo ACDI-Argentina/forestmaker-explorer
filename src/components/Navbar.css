@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #222;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+}
+
+.navbar-logo img {
+    max-height: 40px;
+}
+
+.navbar-links {
+    display: flex;
+    /* Display links in a row */
+    flex-direction: row;
+    /* Ensure links are arranged horizontally */
+    list-style-type: none;
+}
+
+.navbar-links ul {
+    margin: 0;  
+    padding: 0;
+    display: flex;
+    /* Display links in a row */
+    flex-direction: row;
+    /* Ensure links are arranged horizontally */
+}
+
+.navbar-links li {
+    margin-right: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}

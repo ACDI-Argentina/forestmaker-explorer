@@ -1,0 +1,56 @@
+.map-container {
+    height: 100vh;
+    flex-grow: 1;
+}
+
+.project-card {
+    height: 200px;
+    border-radius: 8px;
+    margin: 15px 15px;
+    padding: 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+
+.project-list {
+    max-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.section-title {
+    padding: 10px 15px;
+    padding-bottom: 0px ;
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.project-body {
+    display: flex;
+    gap: 10px;
+}
+
+.projects-count{
+    color: #01796F;
+    font-size: 15px;
+    line-height: 25px;
+    vertical-align: middle; /* Vertically aligns the content */
+}
+
+.flash {
+    animation: flash-animation 1s;
+  }
+  
+  @keyframes flash-animation {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
