@@ -33,7 +33,7 @@ const ProjectsMap = (props) => {
       if (selectedProjectRef.current) {
         // Scroll to the selected project element
         selectedProjectRef.current.scrollIntoView({ behavior: 'smooth' });
-        
+
       }
     };
 
@@ -74,7 +74,7 @@ const ProjectsMap = (props) => {
 
   return (
     <>
-    <Navbar />
+      <Navbar />
       <div className="app-wrapper">
         <div className="project-details">
           <div className="project-list"> {/* TODO: move a component */}
@@ -88,17 +88,30 @@ const ProjectsMap = (props) => {
                 data-id={project.id}
                 className={`project-card ${selectedProjectId === project.id ? 'flash' : ''}`}
                 onClick={() => navigateTo(project)}>
-                <div className="project-title">
-                  {project.name}
-                </div>
                 <div className="project-body">
-                  <img src={`https://picsum.photos/seed/${idx + 1}/200/175`} alt="" />
-                  <div>
-                    <div className="project-location">
-                      {project.country}
+                  <div className="img-wrapper">
+                    <img src={`https://picsum.photos/seed/${idx + 1}/200/175`} alt="" className="img-rounded" />
+
+                  </div>
+                  <div className="project-info">
+                    <div className="project-title">
+                      {project.name}
                     </div>
-                    <div className="project-location">
-                      {project.type}
+                    <div className="project-developer">
+                      {project.developer}
+                    </div>
+                    <div className="project-description">
+                      {project.description}
+                    </div>
+
+                    <div className="expanded"></div>
+                    <div className="row">
+                      <div className="project-country">
+                        {project.country}
+                      </div>
+                      <div className="project-type">
+                        {project.type}
+                      </div>
                     </div>
                     {/*       <div className="project-location">
                     {JSON.stringify(project.coordinates)}

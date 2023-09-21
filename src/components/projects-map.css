@@ -1,56 +1,113 @@
 .map-container {
-    height: 100vh;
-    flex-grow: 1;
+  height: 100vh;
+  flex-grow: 1;
 }
 
 .project-card {
-    height: 200px;
-    border-radius: 8px;
-    margin: 15px 15px;
-    padding: 10px 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    cursor: pointer;
+  height: 180px;
+  border-radius: 8px;
+  margin: 15px 15px;
+  padding: 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.project-type,
+.project-country {
+  font-size: 14px;
 }
 
 .project-list {
-    max-height: 100vh;
-    overflow-y: auto;
-    box-sizing: border-box;
+  max-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
 }
 
 .section-title {
-    padding: 10px 15px;
-    padding-bottom: 0px ;
-    color: #4CAF50;
-    font-weight: bold;
-    font-size: 25px;
+  padding: 10px 15px;
+  padding-bottom: 0px;
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+
+.project-title {
+  color: #225B8C;
+}
+
+.project-developer {
+  color: #008080;
+  font-size: 14px;
+}
+
+.project-description {
+  padding-top: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+  font-size: 12px;
+  color: rgb(92, 97, 117);
+
+
+}
+
+.img-wrapper {
+  min-width: 200px;
+  min-height: 175px;
 }
 
 .project-body {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
+  max-height: 180px;
 }
 
-.projects-count{
-    color: #01796F;
-    font-size: 15px;
-    line-height: 25px;
-    vertical-align: middle; /* Vertically aligns the content */
+.projects-count {
+  color: #01796F;
+  font-size: 15px;
+  line-height: 25px;
+  vertical-align: middle;
+  /* Vertically aligns the content */
 }
 
 .flash {
-    animation: flash-animation 1s;
+  animation: flash-animation 1s;
+}
+
+@keyframes flash-animation {
+  0% {
+    opacity: 1;
   }
-  
-  @keyframes flash-animation {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+
+  50% {
+    opacity: 0;
   }
-  
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.img-rounded {
+  border-radius: 10px;
+  /* Adjust the value to control the roundness */
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+
+}
+
+.expanded {
+
+  flex-grow: 1;
+}
