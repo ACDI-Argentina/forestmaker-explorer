@@ -1,14 +1,37 @@
-body{
+body {
   font-family: 'ABeeZee', sans-serif;
 }
 
-.app-wrapper {
-  display: flex;
-  width: 100vw;
+* {
   box-sizing: border-box;
 }
 
 
-.project-details {
-  width: 500px;
+
+/* Mobile first */
+.app-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+}
+
+
+@media (max-width: 576px) {
+  .app-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .map-container {
+    max-height: 40vh;
+  }
+}
+
+/* Web CSS Breakpoints */
+@media (min-width: 769px){
+  .app-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+  }
+  
 }

@@ -3,6 +3,7 @@ import "./projects-map.css";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import jsonData from '../data.json'; // Import the JSON file
 import Navbar from "./Navbar";
+import ReactCountryFlag from "react-country-flag";
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiamR1dHR3ZWlsZXIiLCJhIjoiY2xtaG9hYjVpMGphcTNsbnNnNW9mOHJkdyJ9.OVLT-bOXFJHxHb39qn1SMw';
 
@@ -82,6 +83,7 @@ const ProjectsMap = (props) => {
               All projects&nbsp;
               <span className="projects-count">{projects.length}</span>
             </div>
+
             {projects.map((project, idx) => (
               <div
                 key={project.id}
@@ -91,7 +93,6 @@ const ProjectsMap = (props) => {
                 <div className="project-body">
                   <div className="img-wrapper">
                     <img src={`https://picsum.photos/seed/${idx + 1}/200/175`} alt="" className="img-rounded" />
-
                   </div>
                   <div className="project-info">
                     <div className="project-title">
@@ -100,13 +101,16 @@ const ProjectsMap = (props) => {
                     <div className="project-developer">
                       {project.developer}
                     </div>
-                    <div className="project-description">
-                      {project.description}
+                    <div className="project-description-wrapper">
+                      <div className="project-description">
+                        {project.description}
+                      </div>
                     </div>
 
                     <div className="expanded"></div>
                     <div className="row">
                       <div className="project-country">
+                        {/* <ReactCountryFlag countryCode="AR" /> &nbsp; */}
                         {project.country}
                       </div>
                       <div className="project-type">

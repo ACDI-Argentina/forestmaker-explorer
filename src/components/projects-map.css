@@ -4,7 +4,6 @@
 }
 
 .project-card {
-  height: 180px;
   border-radius: 8px;
   margin: 15px 15px;
   padding: 10px 10px;
@@ -50,18 +49,97 @@
 
 .project-description {
   padding-top: 3px;
+  padding-right: 3px;
+  margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+
   min-width: 0;
   font-size: 12px;
   color: rgb(92, 97, 117);
+}
 
+.project-details {
+  width: 100%;
+  max-width: 500px;
+}
+
+
+/* Mobile CSS Breakpoints */
+@media (max-width: 576px) {
+  /* Mobile-specific CSS rules */
+
+  .img-wrapper {
+    min-width: 130px;
+    max-width: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .project-description {
+    min-width: 0;
+    min-height: 60px;
+    max-height: 60px;
+  }
+
+  .project-description::after {
+    content: '...';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%);
+  }
+
+  .project-developer {
+    letter-spacing: -0.5px;
+  }
 
 }
 
-.img-wrapper {
-  min-width: 200px;
-  min-height: 175px;
+@media (min-width: 577px) and (max-width: 768px) {
+  /* Small tablet-specific CSS rules */
+
+}
+
+/* Web CSS Breakpoints */
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Medium-sized tablet and small desktop-specific CSS rules */
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+
+  /* Large desktop-specific CSS rules */
+  .img-wrapper {
+    min-width: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+@media (min-width: 1201px) {
+
+  /* Extra-large desktop-specific CSS rules */
+  .img-wrapper {
+    min-width: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+
+
+/* Maybe we can set a minimum height for the cards here
+ */
+
+.project-description-wrapper {
+  position: relative;
 }
 
 .project-body {
@@ -99,7 +177,8 @@
 
 .img-rounded {
   border-radius: 10px;
-  /* Adjust the value to control the roundness */
+  width: 100% !important;
+  /* make it responsive */
 }
 
 .row {
