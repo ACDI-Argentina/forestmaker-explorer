@@ -12,8 +12,8 @@ const ProjectsMap = (props) => {
   const map = useRef(null);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [lng, setLng] = useState(0);
-  const [lat, setLat] = useState(0);
-  const [zoom, setZoom] = useState(1);
+  const [lat, setLat] = useState(1);
+  const [zoom, setZoom] = useState(window.innerWidth < 600? 0: 1); //I want this depends of size screen
   const selectedProjectRef = useRef(null);
 
   const [projects, setProjects] = useState(jsonData.projects);
@@ -27,7 +27,7 @@ const ProjectsMap = (props) => {
       //style: 'mapbox://styles/mapbox/satellite-streets-v12',
 
       center: [lng, lat],
-      zoom: zoom
+      zoom: zoom //thats 
     });
 
     const scrollToProject = () => {
@@ -49,17 +49,14 @@ const ProjectsMap = (props) => {
 
     projects.forEach(project => {
       const marker = new mapboxgl.Marker()
-        .setLngLat([project.coordinates.longitude, project.coordinates.latitude]) // Example marker coordinates (longitude, latitude)
+        .setLngLat([project.coordinates.longitude, project.coordinates.latitude])
         .addTo(map.current);
 
       marker.getElement().addEventListener('click', () => {
         markerClicked(project);
       });
     })
-
-    // Example marker 1
   }, [])
-
 
 
   const navigateTo = (project) => {
