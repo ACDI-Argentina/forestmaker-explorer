@@ -13,7 +13,7 @@ const ProjectsMap = (props) => {
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [lng, setLng] = useState(0);
   const [lat, setLat] = useState(1);
-  const [zoom, setZoom] = useState(window.innerWidth < 600? 0: 1); //I want this depends of size screen
+  const [zoom, setZoom] = useState(window.innerWidth < 600 ? 0 : 1); //I want this depends of size screen
   const selectedProjectRef = useRef(null);
 
   const [projects, setProjects] = useState(jsonData.projects);
@@ -48,7 +48,13 @@ const ProjectsMap = (props) => {
     }
 
     projects.forEach(project => {
-      const marker = new mapboxgl.Marker()
+      const customMarker = document.createElement('img');
+      customMarker.className = "custom-marker";
+      customMarker.src = "/logo.png";
+      customMarker.alt = "marker";
+
+
+      const marker = new mapboxgl.Marker({ element: customMarker })
         .setLngLat([project.coordinates.longitude, project.coordinates.latitude])
         .addTo(map.current);
 

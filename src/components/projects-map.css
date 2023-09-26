@@ -1,3 +1,10 @@
+.custom-marker{
+  width: 20px;
+  background-color: #081D1E;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .map-container {
   height: 100vh;
   flex-grow: 1;
