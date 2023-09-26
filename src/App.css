@@ -1,9 +1,41 @@
-body {
-  font-family: 'ABeeZee', sans-serif;
-}
-
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Weights for Poppins */
+.normal {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Secondary Typeface (Helvetica) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Helvetica', sans-serif;
+}
+
+/* Weights for Helvetica */
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
 }
 
 
@@ -27,11 +59,11 @@ body {
 }
 
 /* Web CSS Breakpoints */
-@media (min-width: 769px){
+@media (min-width: 769px) {
   .app-wrapper {
     display: flex;
     flex-direction: row;
     width: 100vw;
   }
-  
+
 }
