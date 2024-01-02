@@ -17,7 +17,11 @@
     font-weight: bold;    
     font-size: 25px;
     padding-left: 15px;
+}
 
+.details-project-developer{
+    color: #27C18B;
+    font-size: 20px;
 }
 
 
@@ -37,4 +41,14 @@
     font-weight: bold;
     margin-top: 25px;
     margin-bottom: 10px;
+}
+
+.sdg-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sdg-image-grid{
+    width: 31%;
+    border-radius: 7px;
 }

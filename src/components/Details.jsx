@@ -53,6 +53,13 @@ const Details = () => {
                 </div>
             </div>
 
+
+            <div className="details-project-developer">
+                <div>
+                    {project?.developer}
+                </div>
+            </div>
+
             <div>
                 <div className='details-section-title'>Description</div>
                 The Forestal Project is a comprehensive initiative focused on sustainable forestry management and conservation. Through strategic planning, community engagement, and technological innovation, the project aims to preserve and enhance forest ecosystems. Key objectives include promoting biodiversity, mitigating climate change, and supporting local economies. By combining responsible logging practices, reforestation efforts, and education initiatives, the Forestal Project strives to create a harmonious balance between human activities and the preservation of vital forest resources.
@@ -92,9 +99,21 @@ const Details = () => {
 
             <div>
                 <div className='details-section-title'> Sustainable Development Goals</div>
+                <div className="sdg-container">
+                    <img className="sdg-image-grid" src="/assets/sdg/01.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/02.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/03.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/04.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/05.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/06.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/07.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/08.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/09.jpg" alt="" />
+                    <img className="sdg-image-grid" src="/assets/sdg/10.jpg" alt="" />
 
-                <img src="assets/sdg/E_SDG_Icons-01.jpg" alt="" />
-            </div> 
+
+                </div>
+            </div>
         </div>
     )
 }
