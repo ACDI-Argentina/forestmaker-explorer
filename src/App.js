@@ -1,3 +1,4 @@
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import ProjectsMap from './components/projects-map';
 
@@ -5,7 +6,9 @@ import ProjectsMap from './components/projects-map';
 function App() {
   return (
     <div className="App">
-      <ProjectsMap />
+      <BrowserRouter>
+        <ProjectsMap />
+      </BrowserRouter>
     </div>
   );
 }

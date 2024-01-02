@@ -1,0 +1,40 @@
+.details-container {
+    max-width: 500px;
+    padding: 20px 20px 50px 20px;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+
+.details-project-title {
+    font-family: 'Helvetica', sans-serif;
+    color: #1A857A;
+    font-weight: bold;
+    font-size: 22px;
+
+    padding-bottom: 0px;
+    color: #081D1E;
+    font-weight: bold;    
+    font-size: 25px;
+    padding-left: 15px;
+
+}
+
+
+.back-icon {
+    font-weight: bold;
+    font-size: 20px;
+    color: #38494a;
+}
+
+.btn-back{
+    padding-left: 0px;
+}
+
+
+.details-section-title{
+    color: #1A857A;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}

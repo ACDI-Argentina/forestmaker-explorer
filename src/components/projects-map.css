@@ -207,7 +207,7 @@
   /* make it responsive */
 }
 
-.row {
+.rrow {
   display: flex;
   gap: 10px;
 
