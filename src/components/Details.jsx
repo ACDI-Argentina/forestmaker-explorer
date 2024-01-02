@@ -90,9 +90,11 @@ const Details = () => {
                 </tbody>
             </table>
 
-            {/*      <div>
-                <div className='details-section-title'>Insights</div>
-            </div> */}
+            <div>
+                <div className='details-section-title'> Sustainable Development Goals</div>
+
+                <img src="assets/sdg/E_SDG_Icons-01.jpg" alt="" />
+            </div> 
         </div>
     )
 }
